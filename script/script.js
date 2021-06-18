@@ -10,8 +10,6 @@ let memory = "0";
 let operation = "";
 inputDisplay(result);
 
-
-
 const clearAll = () => {
     number1 = "";
     number2 = "0";
@@ -19,7 +17,6 @@ const clearAll = () => {
     current = "0";
     inputDisplay(result);
 }
-
 const enterNumber = (value) => {
     if (current === "0") {
         current = value;
@@ -30,14 +27,12 @@ const enterNumber = (value) => {
         return inputDisplay(current);
     }
 }
-
 const decimal = () => {
     if (!current.includes(".")) {
         current += ".";
         return inputDisplay(current);
     }
 }
-
 const erasesign = () => {
     if (current.length === 1 || current === "" ) {
         current = "";
@@ -46,12 +41,10 @@ const erasesign = () => {
     current = current.slice(0, (current.length - 1));
     return inputDisplay(current);
 }
-
 const clearcurrent = () => {
     current = "0";
     return inputDisplay(current);
 }
-
 const memstore = () => {
     if (result, current === "0") {
         return memory = number1;
@@ -73,7 +66,6 @@ const percent = () => {
     current = (Number(current) / 100 ).toString();
     return inputDisplay(current);
 }
-
 document.getElementById("btnOne").addEventListener("click", function() {enterNumber("1")});
 document.getElementById("btnTwo").addEventListener("click", function() {enterNumber("2")});
 document.getElementById("btnThree").addEventListener("click", function() {enterNumber("3")});
@@ -84,7 +76,6 @@ document.getElementById("btnSeven").addEventListener("click", function() {enterN
 document.getElementById("btnEight").addEventListener("click", function() {enterNumber("8")});
 document.getElementById("btnNine").addEventListener("click", function() {enterNumber("9")});
 document.getElementById("btnZerosign").addEventListener("click", function() {enterNumber("0")});
-
 const equalsign = () => {    
     if (operation === "plus") {
         number2 = current;
@@ -131,7 +122,6 @@ const equalsign = () => {
         return inputDisplay(result);
         }
     }
-
 const addition = () => {
     if (number1.length === 0) {
         number1 = current;
