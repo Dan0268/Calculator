@@ -141,8 +141,9 @@ const addition = () => {
         operation = "plus";
         return inputDisplay(`${number1} + `);
     } else {
+        operation = "plus";
         equalsign();   
-        operation = "+";             
+        operation = "plus";             
         return inputDisplay(`${result} + `);
     }
 }
