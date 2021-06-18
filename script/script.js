@@ -37,7 +37,7 @@ const decimal = () => {
 }
 
 const erasesign = () => {
-    if (current.length === 1) {
+    if (current.length === 1 || current === "" ) {
         current = "";
         return inputDisplay("0");
     }
