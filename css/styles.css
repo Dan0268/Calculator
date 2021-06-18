@@ -1,0 +1,161 @@
+body {
+  padding: 0%;
+  margin: 0%;
+}
+
+.main--flex {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+  background-color: lightgrey;
+}
+
+input {
+  text-align: right;
+  min-height: 50px;
+  font-size: 2rem;
+  background-color: #aae6af;
+  padding-right: 41px;
+  width: 367px;
+  height: 60px;
+}
+
+.calculator {
+  background-color: darkgrey;
+  min-height: 400px;
+  min-width: 400px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-areas: "displayInput displayInput displayInput displayInput" "Mem AllClear Delete Erase" "MemPlus MemRec Percent Divide" "Seven Eight Nine Multiplysign" "Four Five Six Minus" "One Two Three Plus" "PositiveNegative Zerosign Decimalsign Equalsign";
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+#btnZerosign, #btnNine, #btnEight, #btnSeven, #btnSix, #btnFive, #btnFour, #btnThree, #btnTwo, #btnOne {
+  background-color: lightblue;
+  border-color: #007bff;
+  color: #303030;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  width: 100px;
+  height: 80px;
+  margin: 0%;
+  padding: 0%;
+}
+
+#btnZerosign:hover, #btnNine:hover, #btnEight:hover, #btnSeven:hover, #btnSix:hover, #btnFive:hover, #btnFour:hover, #btnThree:hover, #btnTwo:hover, #btnOne:hover {
+  transition-duration: 0.4s;
+  background-color: #007bff;
+  color: white;
+}
+
+#btnMemRec, #btnMemPlus, #btnMem, #btnAllClear, #btnDelete, #btnErase, #btnDivide, #btnPercent, #btnMultiplysign, #btnMinus, #btnPlus, #btnEqualsign, #btnPositiveNegative, #btnDecimalsign {
+  background-color: lightgrey;
+  border-color: #6c757d;
+  color: #303030;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  width: 100px;
+  height: 80px;
+  margin: 0%;
+  padding: 0%;
+}
+
+#btnMemRec:hover, #btnMemPlus:hover, #btnMem:hover, #btnAllClear:hover, #btnDelete:hover, #btnErase:hover, #btnDivide:hover, #btnPercent:hover, #btnMultiplysign:hover, #btnMinus:hover, #btnPlus:hover, #btnEqualsign:hover, #btnPositiveNegative:hover, #btnDecimalsign:hover {
+  transition-duration: 0.4s;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+#btnOne {
+  grid-area: One;
+}
+#btnTwo {
+  grid-area: Two;
+}
+#btnThree {
+  grid-area: Three;
+}
+#btnFour {
+  grid-area: Four;
+}
+#btnFive {
+  grid-area: Five;
+}
+#btnSix {
+  grid-area: Six;
+}
+#btnSeven {
+  grid-area: Seven;
+}
+#btnEight {
+  grid-area: Eight;
+}
+#btnNine {
+  grid-area: Nine;
+}
+#btnZerosign {
+  grid-area: Zerosign;
+}
+#btnDecimalsign {
+  grid-area: Decimalsign;
+}
+#btnPositiveNegative {
+  grid-area: PositiveNegative;
+}
+#btnEqualsign {
+  grid-area: Equalsign;
+}
+#btnPlus {
+  grid-area: Plus;
+}
+#btnMinus {
+  grid-area: Minus;
+}
+#btnMultiplysign {
+  grid-area: Multiplysign;
+}
+#btnPercent {
+  grid-area: Percent;
+}
+#btnDivide {
+  grid-area: Divide;
+}
+#btnErase {
+  grid-area: Erase;
+}
+#btnDelete {
+  grid-area: Delete;
+}
+#btnAllClear {
+  grid-area: AllClear;
+}
+#btnMem {
+  grid-area: Mem;
+}
+#btnMemPlus {
+  grid-area: MemPlus;
+}
+#btnMemRec {
+  grid-area: MemRec;
+}
+#displayInput {
+  grid-area: displayInput;
+}
+
+#displaytext {
+  grid-area: displaytext;
+}
+
+#displayInput:active {
+  border-color: black;
+}

@@ -1,0 +1,154 @@
+// @use "button.scss" as *;
+
+body {
+    padding: 0%;
+    margin: 0%;
+}
+.main {
+    &--flex {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0%;
+        margin: 0%;
+        background-color: lightgrey;
+    }
+}
+input {
+    text-align: right;
+    min-height: 50px;
+    font-size: 2rem;
+    background-color: rgb(170, 230, 175);
+    padding-right: 41px;
+    width: 367px;
+    height: 60px;
+}
+.calculator {
+    background-color: darkgrey;
+    min-height: 400px;
+    min-width: 400px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-areas:
+    // "displaytext displaytext displaytext displaytext"
+    "displayInput displayInput displayInput displayInput"
+    "Mem AllClear Delete Erase"
+    "MemPlus MemRec Percent Divide"
+    "Seven Eight Nine Multiplysign"
+    "Four Five Six Minus"
+    "One Two Three Plus"
+    "PositiveNegative Zerosign Decimalsign Equalsign"
+    // "PositiveNegative Zerosign Decimalsign Equals"
+    ;
+    grid-gap: 5px;
+    padding: 5px;
+}
+@mixin btndimensions {
+    width: 100px;
+    height: 80px;
+    margin: 0%;
+    padding: 0%;
+}
+%btn-outline-primary {
+    background-color: lightblue;
+    border-color: #007bff;
+    color: rgb(48, 48, 48);
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    @include btndimensions;
+}
+%btn-outline-primary-hover {
+    transition-duration: 0.4s;
+    background-color: #007bff;
+    color: white;
+}
+%btn-outline-secondary {
+    background-color: lightgrey;
+    border-color: #6c757d;
+    color: rgb(48, 48, 48);
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    @include btndimensions;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+%btn-outline-secondary-hover {
+    transition-duration: 0.4s;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+%flexed {
+display: flex;
+justify-content: center;
+align-items: center;}
+
+
+@mixin button($name, $type) {
+    #btn {       
+        &#{$name} {
+            @extend %btn-outline-#{$type};
+            grid-area: #{$name};
+        }
+        &#{$name}:hover {
+            @extend %btn-outline-#{$type}-hover;
+        }
+    }
+
+    // .#{$name} {
+    //     @extend %flexed;
+    //     grid-area: #{$name};
+    //     border: 1px solid black;
+    // }
+}
+
+// @mixin btngrid($name) {
+//     .#{$name} {
+//         grid-area: #{$name};
+//         // @extend %flexed;
+//         // min-height: 20px;
+//     }
+// }
+
+@include button(One, primary);
+@include button(Two, primary);
+@include button(Three, primary);
+@include button(Four, primary);
+@include button(Five, primary);
+@include button(Six, primary);
+@include button(Seven, primary);
+@include button(Eight, primary);
+@include button(Nine, primary);
+@include button(Zerosign, primary);
+@include button(Decimalsign, secondary);
+@include button(PositiveNegative, secondary);
+@include button(Equalsign, secondary);
+@include button(Plus, secondary);
+@include button(Minus, secondary);
+@include button(Multiplysign, secondary);
+@include button(Percent, secondary);
+@include button(Divide, secondary);
+@include button(Erase, secondary);
+@include button(Delete, secondary);
+@include button(AllClear, secondary);
+@include button(Mem, secondary);
+@include button(MemPlus, secondary);
+@include button(MemRec, secondary);
+
+#displayInput {
+    grid-area: displayInput;
+}
+#displaytext {
+    grid-area: displaytext;
+}
+#displayInput:active {
+    border-color: black;
+}
