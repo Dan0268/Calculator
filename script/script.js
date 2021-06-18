@@ -10,6 +10,8 @@ let memory = "0";
 let operation = "";
 inputDisplay(result);
 
+
+
 const clearAll = () => {
     number1 = "";
     number2 = "0";
@@ -83,15 +85,7 @@ document.getElementById("btnEight").addEventListener("click", function() {enterN
 document.getElementById("btnNine").addEventListener("click", function() {enterNumber("9")});
 document.getElementById("btnZerosign").addEventListener("click", function() {enterNumber("0")});
 
-const equalsign = () => {
-    // if (operation === "" && result === "") {
-    //     result = current;
-    //     number1 = result;
-    //     number2 = "";
-    //     current = "";
-    //     operation = "";
-    //     return inputDisplay(result);
-    // }  
+const equalsign = () => {    
     if (operation === "plus") {
         number2 = current;
         result = (Number(number1) + Number(number2)).toString();
@@ -99,6 +93,7 @@ const equalsign = () => {
         number2 = "";
         current = "";
         operation = "";
+        ayyLmao();
         return inputDisplay(result);
     } else if (operation === "minus") {
         number2 = current;
@@ -107,6 +102,7 @@ const equalsign = () => {
         number2 = "";
         current = "";
         operation = "";
+        ayyLmao();
         return inputDisplay(result);
     } else if (operation === "mult") {
         number2 = current;
@@ -115,6 +111,7 @@ const equalsign = () => {
         number2 = "";
         current = "";
         operation = "";
+        ayyLmao();
         return inputDisplay(result);
     } else if (operation === "div") {
        if (current === "" || current === "0") {
@@ -130,6 +127,7 @@ const equalsign = () => {
         number2 = "";
         current = "";
         operation = "";
+        ayyLmao();
         return inputDisplay(result);
         }
     }
@@ -191,7 +189,7 @@ const division = () => {
 
 
 document.getElementById("btnAllClear").addEventListener("click", function() {clearAll()});
-document.getElementById("btnEqualsign").addEventListener("click", function() {equalsign()});
+document.getElementById("btnEqualsign").addEventListener("click", function() {equalsign();});
 document.getElementById("btnPlus").addEventListener("click", function() {addition()});
 document.getElementById("btnMinus").addEventListener("click", function() {subtraction()});
 document.getElementById("btnDecimalsign").addEventListener("click", function() {decimal()});
@@ -205,3 +203,60 @@ document.getElementById("btnMemPlus").addEventListener("click", function() {memp
 document.getElementById("btnMemRec").addEventListener("click", function() {memrec()});
 document.getElementById("btnPositiveNegative").addEventListener("click", function() {positivenegative()});
 document.getElementById("btnPercent").addEventListener("click", function() {percent()});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function ayyLmao() {
+    if (Number(result) === 420) {
+        return mlg.play();
+    }
+}
+
+const mlg = new Audio('script/mlg-airhorn.mp3');
